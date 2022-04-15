@@ -1,0 +1,6 @@
+2022-04-14 23:21:29,328 handle_read_excel.py INFO  get_excel_sheets  
+开始获取D:\Pycharm\框架\interview_frame\data\data.xlsx的所有sheet页名称
+2022-04-14 23:21:29,329 handle_read_excel.py INFO  get_row_column_data  
+开始获取某一单元格的数据
+2022-04-14 23:21:29,329 handle_read_excel.py INFO  get_row_column_data  
+获取某一单元格失败，error:'dict' object has no attribute 'iat'

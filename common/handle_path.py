@@ -1,7 +1,7 @@
 # -*- coding = utf-8 -*-
 # @time:2022/3/3 23:50
 # Author:KrisXiao
-# @File:operate_path.py
+# @File:handle_path.py
 # @Software:PyCharm
 """
     读取文件路径的方法
@@ -39,3 +39,4 @@ class GetPath(object):
 
 
 getpath = GetPath()
+

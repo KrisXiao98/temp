@@ -2,8 +2,8 @@ import time
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
-from util.operate_log import my_log
-from util.operate_driver_options import Options
+from common.handle_log import my_log
+from common.handle_driver_options import Options
 
 
 # 不同的driver初始化形式，自己挑喜欢的

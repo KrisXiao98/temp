@@ -8,7 +8,7 @@
 
 import pytest
 from web_driver.web_datadriven import WebUi
-from util.operate_log import my_log
+from common.handle_log import my_log
 
 
 # 改进

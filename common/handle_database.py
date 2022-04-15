@@ -1,12 +1,12 @@
 # -*- coding = utf-8 -*-
 # @time:2022/3/4 23:21
 # Author:KrisXiao
-# @File:operate_database.py
+# @File:handle_database.py
 # @Software:PyCharm
-from util.operate_log import my_log
+from common.handle_log import my_log
 import pymysql
-from util.operate_path import getpath
-from util.operate_ini import HandleIni
+from common.handle_path import getpath
+from common.handle_ini import HandleIni
 
 
 class HandleDb:

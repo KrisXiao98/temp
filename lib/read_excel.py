@@ -5,8 +5,8 @@
 # @Software:PyCharm
 
 import pandas as pd
-from util.operate_log import my_log
-from util.operate_path import getpath
+from common.handle_log import my_log
+from common.handle_path import getpath
 import os
 
 

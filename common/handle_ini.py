@@ -4,8 +4,8 @@
 # @File:operate_configfile.py
 # @Software:PyCharm
 import configparser
-from operate_log import my_log
-from operate_path import getpath
+from handle_log import my_log
+from handle_path import getpath
 import os
 
 

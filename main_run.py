@@ -4,7 +4,7 @@
 # @File:main_run.py
 # @Software:PyCharm
 # -*- coding: utf-8 -*-
-from util.operate_log import HandleLog
+from common.handle_log import HandleLog
 
 if __name__ == '__main__':
     haha = HandleLog()

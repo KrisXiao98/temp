@@ -1,13 +1,13 @@
 # -*- coding = utf-8 -*-
 # @time:2022/3/3 23:40
 # Author:KrisXiao
-# @File:operate_log.py
+# @File:handle_log.py
 # @Software:PyCharm
 
 """
     处理log模块
 """
-from util.operate_path import getpath
+from common.handle_path import getpath
 import time
 import logging
 import os
