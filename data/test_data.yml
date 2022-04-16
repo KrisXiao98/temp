@@ -1,0 +1,35 @@
+login:
+  -
+    visit: http://39.98.138.157/shopxo/index.php
+  -
+    click:
+      -
+        "link_text"
+      -
+        "登录"
+  -
+    input:
+      -
+        name
+      -
+        accounts
+  -
+    input:
+      -
+        name
+      -
+        pwd
+  -
+    click:
+      -
+        xpath
+      -
+        //button[text()="登录"]
+  -
+    assert_text:
+      -
+        "link text"
+      -
+        "退出"
+      -
+        "退出"
