@@ -26,7 +26,7 @@ class GetExcelData:
     def get_excel_sheets(self):
         """
             获取excelsheet页的所有名字
-        :return: 一个list
+        :return: list
         """
         try:
             my_log.info(msg='开始获取{}的所有sheet页名称'.format(self.filename))
@@ -39,7 +39,7 @@ class GetExcelData:
     def get_sheet_row(self, row):
         """
             返回一行数据，以字典的格式
-        :param row: 行号默认从0开始
+        :param row: 行号默认从0开始，且excel第一行不计入读取范围
         :return: dic
         """
         if row > 0:
@@ -66,16 +66,34 @@ class GetExcelData:
 
     def get_cell_data(self, row, column):
         """
-            get a cell by row and column
-        :return: a date of a cell
+            通过行列，获取一个cell的数据。excel第一行不计入查找范围。
+        :return: str
         """
         # pandas默认不读取第一行，且都是以0作为首行列
-        cell_data = self.df.iloc[row, column]
-        return cell_data
+        if row > 0:
+            my_log.info(msg='开始获取第{0}行，第{1}列的数据'.format(row, column))
+            cell_data = self.df.iloc[row - 1, column - 1]
+            return cell_data
+        else:
+            my_log.info(msg='获取第{0}行，第{1}列的数据失败'.format(row, column))
+
+    def get_all_data(self):
+        """
+            获取excel所有数据
+        :return: list
+        """
+        all_data = []
+        # 获取行号的索引，并对其进行遍历：
+        for i in self.rows:
+            # 根据i来获取每一行指定的数据 并利用to_dict转成字典
+            row_data = self.df.loc[i, self.columns].to_dict()
+            all_data.append(row_data)
+        return all_data
 
 
 if __name__ == '__main__':
     excel_data = GetExcelData('data.xlsx', 'case1')
     # print(excel_data.get_cell_data(0, 0))
-    print(excel_data.get_sheet_row(2))
-    print(excel_data.get_sheet_column('执行操作'))
+    # print(excel_data.get_sheet_row(2))
+    # print(excel_data.get_sheet_column('执行操作'))
+    print(excel_data.get_all_data())
