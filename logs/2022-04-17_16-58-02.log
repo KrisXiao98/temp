@@ -1,0 +1,2 @@
+2022-04-17 16:58:02,815 web_key.py INFO  open_browser  以options的配置启动浏览器
+2022-04-17 16:58:05,725 web_key.py INFO  open_browser  ---默认使用谷歌浏览器（无缓存）---

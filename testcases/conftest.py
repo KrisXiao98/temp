@@ -1,20 +1,23 @@
-#!/usr/bin/env python
 # -*- coding = utf-8 -*-
-# @time:2022/3/27 19:32
+# @time:2022/4/17 16:25
 # Author:KrisXiao
 # @File:conftest.py
 # @Software:PyCharm
 
-
 import pytest
-from web_driver.web_datadriven import WebUi
-from common.handle_log import my_log
+import allure
+from web_driver.web_key import WebUi
+
+driver = None
 
 
-# 改进
-@pytest.fixture(scope="session", autouse=True)
-def open_browser():
-    my_log.info('启动浏览器驱动')
-    web_driver = yield WebUi('Chrome')
-    my_log.info('执行session的teardown')
-    web_driver.quit()
+@pytest.fixture(scope='session', autouse=True)
+def browser():
+    global driver
+    if driver is None:
+        with allure.step('打开一个浏览器驱动以运行全部的用例'):
+            driver = WebUi('Chrome')
+            driver.max_window()
+            yield driver
+        with allure.step('关闭这个浏览器'):
+            driver.quit()

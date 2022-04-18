@@ -1,0 +1,2 @@
+2022-04-17 15:41:26,430 read_yaml.py INFO  read_yaml  开始获取D:\Pycharm\框架\interview_frame\data\test_data.ymlyaml文件数据
+2022-04-17 15:41:26,430 read_yaml.py INFO  read_yaml  获取yaml数据失败，error:list indices must be integers or slices, not str

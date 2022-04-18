@@ -16,7 +16,7 @@ def read_yaml(filename):
         with open(filename, 'r', encoding='utf-8') as f:
             my_log.info(msg='开始获取{}yaml文件数据'.format(filename))
             data = yaml.load(stream=f, Loader=yaml.FullLoader)
-            return data
+            return data['login']
     except Exception as e:
         my_log.info(msg='获取yaml数据失败，error:{}'.format(e))
 

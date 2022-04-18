@@ -37,6 +37,12 @@ class GetPath(object):
         """
         return os.path.join(self.project_path, 'data')
 
+    def get_report_path(self):
+        """
+
+        :return: 返回报告文件的路径地址的目录所在地（绝对路径）
+        """
+        return os.path.join(self.project_path, 'report')
+
 
 getpath = GetPath()
-

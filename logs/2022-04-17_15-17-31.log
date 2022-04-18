@@ -1,0 +1,5 @@
+2022-04-17 15:17:31,376 read_yaml.py INFO  read_yaml  开始获取D:\Pycharm\框架\interview_frame\data\test_data.ymlyaml文件数据
+2022-04-17 15:17:31,390 test_P0.py INFO  test_login  
+开始执行login
+2022-04-17 15:17:31,391 test_P0.py INFO  teardown_class  
+执行teardown
