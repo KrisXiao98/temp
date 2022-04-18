@@ -1,3 +1,0 @@
-2022-04-17 14:45:41,144 web_datadriven.py INFO  open_browser  以options的配置启动浏览器
-2022-04-17 14:45:42,983 test_P0.py INFO  test_login  开始执行login
-2022-04-17 14:45:45,590 test_P0.py INFO  teardown_class  执行teardown

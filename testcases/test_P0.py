@@ -12,17 +12,17 @@ from lib.read_yaml import read_yaml
 from web_driver.web_key import WebUi
 from common.handle_path import getpath
 
-@pytest.mark.P0
-class TestP0:
 
+@pytest.mark.P0
+@allure.feature('PO级别用例')
+class TestP0:
+    @allure.story('login模块')
     def test_login(self, browser):
         browser.visit('https://www.baidu.com')
         browser.sleep(5)
         assert 1 == 1
 
 
-
-
 if __name__ == '__main__':
-    pytest.main(['-s',  '--alluredir', '../report'])
+    pytest.main(['-s', '--alluredir', '../report'])
     os.system('allure serve result')

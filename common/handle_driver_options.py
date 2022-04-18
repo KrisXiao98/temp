@@ -23,7 +23,7 @@ class Options:
         # 这个现在已经用不了了，这是老版本去掉警告条的方式
         # options.add_argument('disable-infobars')
         # 添加本地缓存
-        self.options.add_argument(r'--user-data-dir=C:\Users\xiaokai\AppData\Local\Google\Chrome\User Data')
+        # self.options.add_argument(r'--user-data-dir=C:\Users\xiaokai\AppData\Local\Google\Chrome\User Data')
         # 添加无头指令：有斟酌地进行使用。
         # options.add_argument('--headless')
         # 添加去掉密码弹窗管理

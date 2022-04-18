@@ -84,6 +84,7 @@ class GetExcelData:
         """
         all_data = []
         # 获取行号的索引，并对其进行遍历：
+        my_log.info(msg='开始获取excel所有数据至list')
         for i in self.rows:
             # 根据i来获取每一行指定的数据 并利用to_dict转成字典
             row_data = self.df.loc[i, self.columns].to_dict()

@@ -1,2 +1,0 @@
-[32mINFO    [0m log:web_key.py:15 以options的配置启动浏览器
-[32mINFO    [0m log:web_key.py:22 ---默认使用谷歌浏览器（无缓存）---
