@@ -14,8 +14,9 @@ class GetExcelData:
     def __init__(self, filename, sheet_name):
         self.filename = os.path.join(getpath.get_data_path(), filename)
         self.sheet_name = sheet_name
-        # 读取excel表格
+        # 读取excel表格，默认nan为None。如果加形参：keep_default_na=False，那么nan就为""
         self.df = pd.read_excel(self.filename, sheet_name=sheet_name)
+        self.df = self.df.where(self.df.notnull(), None)
         # 需要用dataframe格式的用这个
         self.dataframe = pd.DataFrame(self.df)
         # 获取到所有行索引值list
