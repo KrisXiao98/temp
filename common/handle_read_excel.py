@@ -4,8 +4,8 @@
 # @File:handle_read_excel.py
 # @Software:PyCharm
 
-from handle_path import getpath
-from handle_log import my_log
+from common.handle_path import getpath
+from common.handle_log import my_log
 import pandas as pd
 import os
 
@@ -91,6 +91,9 @@ class GetExcelData:
             row_data = self.df.loc[i, self.columns].to_dict()
             all_data.append(row_data)
         return all_data
+
+    def handle_webui_excel(self):
+        pass
 
 
 if __name__ == '__main__':

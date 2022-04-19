@@ -1,3 +1,0 @@
-INFO     log:conftest.py:19 使用一个driver实现testcases运行
-INFO     log:web_key.py:15 以options的配置启动浏览器
-INFO     log:conftest.py:24 关闭这个driver

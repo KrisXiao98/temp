@@ -1,0 +1,34 @@
+-
+   browser: Chrome
+   url: 'http://39.98.138.157/shopxo/index.php'
+   click_login:
+      -
+         'link text'
+      -
+         '登录'
+   input_name:
+      -
+         "name"
+      -
+         'accounts'
+      -
+         'xiaokai'
+   input_pwd:
+      -
+         "name"
+      -
+         'pwd'
+      -
+         '123456'
+   click_login2:
+      -
+         'xpath'
+      -
+         '//button[text()="登录"]'
+   assert_text:
+      -
+         'link text'
+      -
+         '退出'
+      -
+         '退出'

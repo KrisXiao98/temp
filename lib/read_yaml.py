@@ -22,4 +22,4 @@ def read_yaml(filename):
 
 
 if __name__ == '__main__':
-    print(read_yaml('testdata.yml'))
+    print(read_yaml('login.yml'))
