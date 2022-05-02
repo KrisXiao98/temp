@@ -1,0 +1,5 @@
+2022-04-20 00:48:38,454 read_yaml.py INFO  read_yaml  开始获取D:\Pycharm\框架\interview_frame\data\login.ymlyaml文件数据
+2022-04-20 00:48:38,568 read_yaml.py INFO  read_yaml  开始获取D:\Pycharm\框架\interview_frame\data\login.ymlyaml文件数据
+2022-04-20 00:48:38,573 conftest.py INFO  browser  使用一个driver实现testcases运行
+2022-04-20 00:48:38,574 web_key.py INFO  open_browser  以options的配置启动浏览器
+2022-04-20 00:48:49,895 conftest.py INFO  browser  关闭这个driver
