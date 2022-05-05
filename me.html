@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="我的个人网站，包含了我的笔记，练习和代码"
+    />
+    <title>肖锴的个人网站</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      background-color: #eee;
+      margin: 10px;
+      height: 100vh;
+    }
+    .header {
+      display: -webkit-flex;
+      display: flex;
+      height: 60px;
+      width: 100vh;
+      justify-content: space-between;
+      background-color: rgb(144, 182, 238);
+      box-shadow: 5px 5px 5px grey;
+    }
+    .header_div {
+      background-color: cornflowerblue;
+      flex-direction: row;
+      margin: 10px;
+    }
+    .header_text_shadow {
+      text-shadow: 2px 2px 2px #ff0000;
+    }
+    #icon {
+      height: 50px;
+      width: 50px;
+    }
+  </style>
+  <body>
+    <div class="header" ;>
+      <div>
+        <img
+          id="icon"
+          alt="logo"
+          src="https://img0.baidu.com/it/u=2926715223,1445444764&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500"
+        />
+      </div>
+      <div class="header_div header_text_shadow">关于我</div>
+      <div class="header_div header_text_shadow">知识库</div>
+      <div class="header_div" ; id="time" ;>
+        <script>
+          function showTime() {
+            var date = new Date();
+
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            month = month < 10 ? "0" + month : month;
+            var day = date.getDate();
+            day = day < 10 ? "0" + day : day;
+            var week = "日一二三四五六".charAt(date.getDay()); // 使用charAt函数提取相应汉字
+            var hour = date.getHours();
+            hour = hour < 10 ? "0" + hour : hour; // 用三目运算符调整数字显示格式
+            var minute = date.getMinutes();
+            minute = minute < 10 ? "0" + minute : minute;
+            var second = date.getSeconds();
+            second = second < 10 ? "0" + second : second;
+
+            var current =
+              year +
+              "-" +
+              month +
+              "-" +
+              day +
+              " " +
+              "星期" +
+              week +
+              " " +
+              hour +
+              ":" +
+              minute +
+              ":" +
+              second;
+
+            document.getElementById("time").innerHTML = current;
+          }
+          setInterval("showTime()", 1000); //每隔1000毫秒（即1秒）显示一次当前时间
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
