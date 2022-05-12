@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register</title>
+  </head>
+  <body>
+    <!-- action和method的作用 -->
+    <form action="http:127.0.0.1:8899/register" method="get">
+      <table>
+        <!-- 表格标题 -->
+        <caption>
+          register&nbsp;table
+        </caption>
+        <tr>
+          <td>UserName</td>
+          <!-- value不用写，让用户自己输入 -->
+          <td><input type="text" name="username" /></td>
+        </tr>
+        <tr>
+          <td>PassWord</td>
+          <!-- value不用写，让用户自己输入 -->
+          <td><input type="password" name="pwd" /></td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>
+            <!-- 到最后参数传的是name和value，checked默认选中 -->
+            <input type="radio" name="gender" value="man" checked />Man<br />
+            <input type="radio" name="gender" value="woman" />Woman
+          </td>
+        </tr>
+        <tr>
+          <td>Hobby</td>
+          <td>
+            <!-- 到最后参数传的是name（这里name在select里）和value，selected默认选中 -->
+            <select name="hobby" multiple="multiple" size="2">
+              <option value="smoke">somke</option>
+              <option value="dirnk">dirnk</option>
+              <option value="disco" selected>disco</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>introduce</td>
+          <!-- 规定文本域输入20个字符 -->
+          <td><textarea maxlength="20" name="introduce"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <!-- 提交和重置必须写在form里面，不然没用 -->
+            <input type="submit" value="register" />
+            <input type="reset" value="reset" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
