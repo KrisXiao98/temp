@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>表单进阶</title>
+  </head>
+  <body>
+    <!-- autocomplete：自动显示文本框中之前输入过的内容，默认为off；
+         enctype="multipart/form-data" 为含有文件传输中必写的。该属性规定了在提交表单时要使用哪种内容类型-->
+    <form
+      action="test.js"
+      method="get"
+      autocomplete="on"
+      enctype="multipart/form-data"
+    >
+      <!-- 传输文件专用 -->
+      <input type="file" /><br />
+      <label>用户名:</label>
+      <!-- placeholder显示提示内容，required表示为必须填写, autofocus为默认对焦 -->
+      <input
+        type="text"
+        placeholder="请输入用户名"
+        name="username"
+        autofocus
+        required
+      /><br />
+      <label>密码:</label>
+      <!-- placeholder显示提示内容，required表示为必须填写,pattern为正则匹配这里表示为5位数字 -->
+      <input
+        type="password"
+        placeholder="请输入密码"
+        name="pwd"
+        pattern="^\d{5}$"
+        required
+      /><br />
+      <!-- laber中的for对应下方单选框的id，可以实现点击男字来选中单选按钮 -->
+      <label for="man">男</label>
+      <!-- name和value为必填，checked表示默认选中 -->
+      <input type="radio" id="man" name="gender" value="man" checked />
+      <label for="woman">女</label>
+      <input type="radio" id="woman" name="gender" value="woman" />
+      <br />
+      <!-- 根据list和datalist实现文本框可供选择的效果，但是只能选择一个，name必须写 -->
+      选择你的兴趣爱好:<input type="text" list="tips" name="hobby" />
+      <datalist id="tips">
+        <!-- value必须学 -->
+        <option value="smoke">if you like smoke</option>
+        <option value="drink">if you like drink</option>
+        <option value="disco">if you like disco</option>
+      </datalist>
+      <br />
+      <input type="submit" value="提交" id="submit" />
+      <input type="reset" value="重置" />
+    </form>
+  </body>
+</html>
