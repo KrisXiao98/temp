@@ -51,8 +51,10 @@
         <option value="disco">if you like disco</option>
       </datalist>
       <br />
-      <input type="submit" value="提交" id="submit" />
+      <!-- 使用formnovalidate，即可实现上方必填项不填也能正常进行提交 -->
+      <input type="submit" value="提交" formnovalidate />
       <input type="reset" value="重置" />
     </form>
+    <!-- http://127.0.0.1:3000/exercise/html/test.js?username=xiaokai&pwd=12345&gender=man&hobby=smoke -->
   </body>
 </html>
