@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS字体</title>
+    <style>
+      /* 所有h2标题文字颜色改为orange*/
+      h2 {
+        color: orange;
+      }
+      .front-size {
+        font-size: 14px;
+      }
+      .front-family1 {
+        font-family: "黑体";
+      }
+      .front-family2 {
+        font-family: "\9ED1\4F53";
+      }
+      /* 这种写法其实和<b>一样，normal为正常的形态 */
+      .front-weight {
+        font-weight: bold;
+      }
+      .front-style {
+        font-style: italic;
+      }
+      /* 综合形态必须按照顺序进行 */
+      .front-comprehensive {
+        font: italic bolder 20px "宋体";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>css字体</h1>
+    <h2>front-size:字体大小</h2>
+    <p class="front-size">通过更改css样式，在这里使用字体14px大小</p>
+    <h2>front-family：字体类型（宋体、楷体等）</h2>
+    <p class="front-family1">
+      通过更改css样式，在这里查看字体类型为黑体，使用中文
+    </p>
+    <p class="front-family2">
+      通过更改css样式，在这里查看字体类型为黑体,使用unicode（推荐使用，或者使用英文）
+    </p>
+    <h2>font-weight：字体加粗</h2>
+    <p class="front-weight">通过更改css样式，在这里查看字体加粗</p>
+    <h2>front-style：字体属性</h2>
+    <p class="front-style">通过更改css样式，在这里查看字体属性斜体</p>
+    <h2>font：综合设置字体样式</h2>
+    <p class="front-comprehensive">通过更改css样式，在这里查看字体综合</p>
+  </body>
+</html>
