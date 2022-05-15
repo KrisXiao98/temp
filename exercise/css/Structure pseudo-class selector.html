@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>结构伪类选择器</title>
+    <style>
+      /* 这里选择id为ol2的第一个li */
+      ol#ol1 > li:first-child {
+        color: red;
+      }
+      /* 这里只有这么写，才能选中第一个ol，因为ol1前面还有三个标签。 */
+      ol:nth-child(4) {
+        font-size: 25px;
+      }
+      /* 选择所有ol1下的li颜色改为gray */
+      ol:nth-child(4) li {
+        color: gray;
+      }
+      /* 选择ol1下的li的偶数位加粗，也可以写2n，表2的倍数*/
+      ol#ol1 > li:nth-child(even) {
+        font-weight: bold;
+      }
+      /* ol2下的所有li中奇数列全部加粗 */
+      ol:nth-child(5) li:nth-child(odd) {
+        font-weight: bold;
+      }
+      /* 以末尾作为第一行，开始数，奇数列改变为蓝色 */
+      ol#ol2 > li:nth-last-child(odd) {
+        color: blue;
+      }
+      /* ol3下所有3为倍数的列字体大小改为20px */
+      ol#ol3 > li:nth-child(3n) {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>结构伪类选择器作用：主要是通过父元素的第几个元素来进行选择。</p>
+    <p>使用灵活，下面举几个例子</p>
+    <h3>定义几个有序列表</h3>
+
+    <ol id="ol1">
+      <caption>
+        列表1
+      </caption>
+      <li>ol-1:No.1</li>
+      <li>ol-1:No.2</li>
+      <li>ol-1:No.3</li>
+      <li>ol-1:No.4</li>
+      <li>ol-1:No.5</li>
+      <li>ol-1:No.6</li>
+    </ol>
+    <ol id="ol2">
+      <caption>
+        列表2
+      </caption>
+      <li>ol-2:No.1</li>
+      <li>ol-2:No.2</li>
+      <li>ol-2:No.3</li>
+      <li>ol-2:No.4</li>
+      <li>ol-2:No.5</li>
+      <li>ol-2:No.6</li>
+    </ol>
+    <ol id="ol3">
+      <caption>
+        列表3
+      </caption>
+      <li>ol-3:No.1</li>
+      <li>ol-3:No.2</li>
+      <li>ol-3:No.3</li>
+      <li>ol-3:No.4</li>
+      <li>ol-3:No.5</li>
+      <li>ol-3:No.6</li>
+    </ol>
+  </body>
+</html>
