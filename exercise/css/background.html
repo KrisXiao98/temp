@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #seraphine-icon {
+        border-radius: 80px;
+        margin: 10px;
+      }
+      .common-head {
+        width: 100%;
+        height: 78px;
+        background-color: rgba(0, 0, 0, 3);
+      }
+      div {
+        width: 50px;
+        height: 60px;
+      }
+      body {
+        background-image: url("./imgs/seraphine.jpg");
+        /* 不重复，只使用这一个图片 */
+        background-repeat: no-repeat;
+        /* # no-repeat情况下图片宽高比不变、铺满整个容器的宽高，而图片多出的部分则会被截掉 */
+        background-size: cover;
+        /* 保持滚动不变化 */
+        background-attachment: fixed;
+        /* 此写法实现body整个被背景图片覆盖，且缩小窗口等不会变形,问题就是不能使用简写*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 仿照LOL官网做个设计 -->
+    <div class="comm-head">
+      <div class="head-normal">
+        <a href="#">
+          <img
+            id="seraphine-icon"
+            src="./imgs/seraphine-icon.png"
+            height="60px"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

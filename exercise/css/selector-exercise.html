@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>selector exercise
+    <title>selector exercise</title>
+    <style>
+        .nav a{
+            color: skyblue;
+        }
+        .site-r a{
+            color: red
+        }
+        .nav, .sitenav {
+            font-size: 14px;
+            font-family: '微软雅黑';
+        }
+        .nav > ul > li > a{
+            color: green;
+        }
+    </style>
 <body>
+    <!-- 主导航栏 -->
     <div class="nav">
         <ul>
             <li><a href="#">公司首页</a></li>
@@ -13,10 +29,22 @@
             <li><a href="#">公司产品</a></li>
             <li>
                 <a href="#">联系我们</a>
-                ul > <li><a href=""></a><a href=""></a></li>
-                <li><a href=""></a><a href=""></a></li>
+                <ul>
+                    <li><a href="#">公司邮箱</a></li>
+                    <li><a href="#">公司电话</a></li>
+                </ul>
             </li>
         </ul>
+    </div>
+    <!-- 侧导航栏 -->
+    <div>
+        <div class="sitenav">左侧侧导航栏</div>
+        <div class="site-r"><a href="#">登录</a></div>
+    </div>
+    <div>
+        <br>
+        <br>
+        要求：<img src="./imgs/Snipaste_2022-05-16_23-19-47.png" alt="题目">
     </div>
 </body>
 </html>
