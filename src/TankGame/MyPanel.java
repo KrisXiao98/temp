@@ -7,7 +7,8 @@ import java.awt.event.KeyListener;
 import java.util.Vector;
 
 //为了监听键盘时间，需要继承KeyListen
-public class MyPanel extends JPanel implements KeyListener {
+//为了让Pannel不停的重绘子弹，所以要做成线程
+public class MyPanel extends JPanel implements KeyListener, Runnable {
     Hero hero = null;
     //写敌人的坦克
     Vector<EnemyTank> enemyTanks = new Vector<>();
@@ -30,6 +31,12 @@ public class MyPanel extends JPanel implements KeyListener {
         super.paint(g);
         g.fillRect(0, 0, 1000, 750);//填充矩形，默认黑色
         drawTank(hero.getX(), hero.getY(), g, hero.getDirection(), 0);
+
+        //画子弹的外形
+        if (hero.shot != null && hero.shot.isLive == true) {
+            //g.fill3DRect(hero.shot.x, hero.shot.y, 2, 3, false);
+            g.draw3DRect(hero.shot.x, hero.shot.y, 2, 3, false);
+        }
         //画敌人的坦克
         for (int i = 0; i < enemyTanks.size(); i++) {
             EnemyTank enemyTank = enemyTanks.get(i);
@@ -97,23 +104,23 @@ public class MyPanel extends JPanel implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_W){
+        if (e.getKeyCode() == KeyEvent.VK_W) {
             hero.setDirection(0);
             //修改坦克坐标
             hero.moveUp();
         } else if (e.getKeyCode() == KeyEvent.VK_D) {
             hero.setDirection(1);
             hero.moveRight();
-        }else if (e.getKeyCode() == KeyEvent.VK_S) {
+        } else if (e.getKeyCode() == KeyEvent.VK_S) {
             hero.setDirection(2);
             hero.moveDown();
-        }else if (e.getKeyCode() == KeyEvent.VK_A) {
+        } else if (e.getKeyCode() == KeyEvent.VK_A) {
             hero.setDirection(3);
             hero.moveULeft();
         }
 
         //如果按下j键，就发射子弹
-        if (e.getKeyCode() == KeyEvent.VK_J){
+        if (e.getKeyCode() == KeyEvent.VK_J) {
             hero.shotEnemyTank();
         }
         //面板重绘
@@ -123,5 +130,17 @@ public class MyPanel extends JPanel implements KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
 
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            this.repaint();
+        }
     }
 }
