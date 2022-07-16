@@ -2,7 +2,7 @@ package IODemo.ChuliLiuDemo;
 
 
 /*
-这里就是自己做的一个处理流，使用装饰器设计模式来实现
+这里就是自己做的一个处理流，使用修饰器设计模式来实现
  */
 public class BufferedReader_ extends Reader_{
     private Reader_ reader_;
