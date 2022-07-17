@@ -31,6 +31,9 @@ class Dog implements Serializable {
     private String name;
     private int age;
 
+    //serialVersionUID 序列化的版本号，提高兼容性，不会因为你再加了个hobby就认为是个全新的类。认为是y原先Dog的升级版
+    private static final long serialVersionUID = 1L;
+    private String hobby;
     public Dog(String name, int age) {
         this.name = name;
         this.age = age;
