@@ -34,6 +34,15 @@ class Dog implements Serializable {
     //serialVersionUID 序列化的版本号，提高兼容性，不会因为你再加了个hobby就认为是个全新的类。认为是y原先Dog的升级版
     private static final long serialVersionUID = 1L;
     private String hobby;
+
+    //序列化对象时，默认将里面所以属性都进行了序列化，但除了Static或者transient修饰的成员
+    //可以看到反序列化输出时，会显示null
+    private static String favouriteFood;
+    private transient String favouriteWear;
+
+    //要求里面的属性的类型也需要实现序列化接口
+    private Master master;//看下面的Master类
+
     public Dog(String name, int age) {
         this.name = name;
         this.age = age;
@@ -63,3 +72,6 @@ class Dog implements Serializable {
                 '}';
     }
 }
+
+//class Master {}////这里Master没有实现Serializable接口，所以会抛出Serializable异常
+class Master implements Serializable{}//必须这么写
