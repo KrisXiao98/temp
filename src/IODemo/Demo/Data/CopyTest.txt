@@ -8,7 +8,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-//完成文件拷贝，使用节点流中的字节流-file input和output
+//完成文件
 public class Exercise01 {
     public static void main(String[] args) {
 
@@ -16,7 +16,6 @@ public class Exercise01 {
 
     @Test
     public void copyFile() throws IOException {
-
         //完成文件的拷贝
         //需要被拷贝的文件path
         String needCopyFilePath = "D:\\Project\\Java\\JavaProject\\src\\IODemo\\Demo\\Data\\b.txt";
