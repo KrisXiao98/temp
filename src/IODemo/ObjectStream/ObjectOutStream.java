@@ -13,7 +13,7 @@ public class ObjectOutStream {
         String filePath = "D:\\Project\\Java\\JavaProject\\src\\IODemo\\Demo\\Data\\data.dat";
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(filePath));
         //序列化数据
-        objectOutputStream.write(100); //自动装箱Integer (而Integer实现了Serializable）
+        objectOutputStream.writeInt(100); //自动装箱Integer (而Integer实现了Serializable）
         objectOutputStream.writeBoolean(true);//Boolen也是实现了Serializable
         objectOutputStream.writeUTF("肖锴"); //同理
 
@@ -34,5 +34,29 @@ class Dog implements Serializable {
     public Dog(String name, int age) {
         this.name = name;
         this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
