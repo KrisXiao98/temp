@@ -2,6 +2,7 @@ package IODemo.Standard;
 
 public class Demo01 {
     public static void main(String[] args) {
-        System
+        System.out.println(System.in.getClass());
+        System.out.println(System.out.getClass());
     }
 }
