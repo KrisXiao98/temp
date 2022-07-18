@@ -13,7 +13,11 @@ public class Demo02 {
         InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(filePath), "gbk");
         //2.BufferedReader是处理流，inputStreamReader是Reader的实现类，转为处理流效率更高。
         BufferedReader br = new BufferedReader(inputStreamReader);
+
+        //简单写法
+        BufferedReader br2 = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), "gbk"));
         //最终实现通过转换流加指定编码格式的方式，读取字符文件。
         System.out.println(br.readLine());
+        br.close();
     }
 }
