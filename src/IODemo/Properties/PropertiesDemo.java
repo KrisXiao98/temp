@@ -61,7 +61,7 @@ public class PropertiesDemo {
         properties.list(System.out);//打印显示创建成功了，但是看文件还没有写进去
         properties.store(new FileWriter(filePath), null);//到这里才是写进文件里去
 
-        //底层调用hashtable的put方法
+        //底层调用HashTable的put方法
         /*
         public synchronized V put(K key, V value) {
             // Make sure the value is not null
